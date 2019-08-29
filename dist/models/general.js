@@ -7,8 +7,6 @@ var Entity;
     Entity["POST"] = "post";
     Entity["TAG"] = "tgg";
     Entity["FILE"] = "files";
-    Entity["NOTIFICATION"] = "notifications";
-    Entity["REQUEST"] = "requests";
 })(Entity = exports.Entity || (exports.Entity = {}));
 exports.Color = {
     PRIMARY: '#1745D5',

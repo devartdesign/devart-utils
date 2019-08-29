@@ -3,9 +3,7 @@ export declare enum Entity {
     USER = "users",
     POST = "post",
     TAG = "tgg",
-    FILE = "files",
-    NOTIFICATION = "notifications",
-    REQUEST = "requests"
+    FILE = "files"
 }
 export declare const Color: {
     PRIMARY: string;

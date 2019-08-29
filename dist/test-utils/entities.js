@@ -52,6 +52,23 @@ exports.getFileMessage = () => ({
     updatedAt: '',
 });
 exports.getTag_1 = () => ({
-    tag: 'tag'
+    _id: 1,
+    name: 'tag_1',
+    description: 'description tag 1'
+});
+exports.getTag_2 = () => ({
+    _id: 2,
+    name: 'tag_2'
+});
+exports.getPost_1 = () => ({
+    _id: 1,
+    title: 'post title 1',
+    post: 'some post text',
+    year: 2019,
+    month: 10,
+    day: 10,
+    slug: 'post-title-1',
+    createdAt: exports.getTestDate('2019-10-10 00:00:00'),
+    updatedAt: exports.getTestDate('2019-10-10 00:00:00'),
 });
 //# sourceMappingURL=entities.js.map
