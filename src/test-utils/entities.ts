@@ -3,7 +3,8 @@ import * as moment from 'moment-timezone';
 import {
   UserModel,
   TagModel,
-  FileModel
+  FileModel,
+  PostModel
 } from '../models';
 
 export const getTestDate = (date: Date | string = '2019-03-05 11:01:45'): Date => moment(date).tz('America/Los_Angeles').toDate();
@@ -62,5 +63,24 @@ export const getFileMessage = (): FileModel.IFile => ({
 });
 
 export const getTag_1 = (): TagModel.ITag => ({
-  tag: 'tag'
+  _id: 1,
+  name: 'tag_1',
+  description: 'description tag 1'
+});
+
+export const getTag_2 = (): TagModel.ITag => ({
+  _id: 2,
+  name: 'tag_2'
+});
+
+export const getPost_1 = (): PostModel.IPost => ({
+  _id: 1,
+  title: 'post title 1',
+  post: 'some post text',
+  year: 2019,
+  month: 10,
+  day: 10,
+  slug: 'post-title-1',
+  createdAt: getTestDate('2019-10-10 00:00:00'),
+  updatedAt: getTestDate('2019-10-10 00:00:00'),
 });

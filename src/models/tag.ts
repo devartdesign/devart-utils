@@ -1,3 +1,5 @@
 export interface ITag {
-  tag: string;
+  _id: number;
+  name: string;
+  description?: string;
 }
