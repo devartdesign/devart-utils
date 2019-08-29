@@ -14,4 +14,5 @@ __export(require("./deepCompare"));
 __export(require("./flatten"));
 __export(require("./listToMap"));
 __export(require("./parseUrlSearch"));
+__export(require("./hexToRgba"));
 //# sourceMappingURL=index.js.map

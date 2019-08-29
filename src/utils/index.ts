@@ -9,3 +9,4 @@ export * from './deepCompare';
 export * from './flatten';
 export * from './listToMap';
 export * from './parseUrlSearch';
+export * from './hexToRgba';
