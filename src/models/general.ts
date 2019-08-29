@@ -4,8 +4,6 @@ export enum Entity {
   POST = 'post',
   TAG = 'tgg',
   FILE = 'files',
-  NOTIFICATION = 'notifications',
-  REQUEST = 'requests',
 }
 
 export const Color = {
