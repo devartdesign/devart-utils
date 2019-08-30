@@ -37,9 +37,7 @@ export declare const RegMap: {
 export declare type IEntityMap<T> = {
     [id: string]: T;
 };
-export declare type ISort = {
-    [key: string]: 'asc' | 'desc';
-};
+export declare type SortDirection = 'ASC' | 'DESC';
 export interface IPagination<T> {
     count: number;
     page: number;
@@ -48,15 +46,11 @@ export interface IPagination<T> {
     docs: T[];
 }
 export interface IApiQuery {
-    page: number;
-    limit: number;
-    q?: {
-        [key: string]: any;
-    };
-    sort?: {
-        [key: string]: 'asc' | 'desc';
-    };
-    fields?: string;
-    orFields?: string;
-    [customQueryParam: string]: any;
+    page?: number;
+    limit?: number;
+    query?: string;
+    sortBy?: string;
+    sortDirection?: SortDirection;
+    fields?: string[];
+    baseQuery?: any;
 }

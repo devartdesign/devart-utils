@@ -39,7 +39,7 @@ export const RegMap = {
 
 export type IEntityMap<T> = { [id: string]: T };
 
-export type ISort = { [key: string]: 'asc' | 'desc' };
+export type SortDirection = 'ASC' | 'DESC';
 
 export interface IPagination<T> {
   count: number;
@@ -50,12 +50,11 @@ export interface IPagination<T> {
 }
 
 export interface IApiQuery {
-  page: number;
-  limit: number;
-  q?: { [key: string]: any };
-  sort?: { [key: string]: 'asc' | 'desc' };
-  fields?: string;
-  orFields?: string;
-
-  [customQueryParam: string]: any;
+  page?: number;
+  limit?: number;
+  query?: string;
+  sortBy?: string;
+  sortDirection?: SortDirection;
+  fields?: string[];
+  baseQuery?: any;
 }
