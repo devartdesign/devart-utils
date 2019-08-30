@@ -4,8 +4,8 @@ var Entity;
 (function (Entity) {
     Entity["AUTH"] = "auth";
     Entity["USER"] = "users";
-    Entity["POST"] = "post";
-    Entity["TAG"] = "tgg";
+    Entity["POST"] = "posts";
+    Entity["TAG"] = "tags";
     Entity["FILE"] = "files";
 })(Entity = exports.Entity || (exports.Entity = {}));
 exports.Color = {

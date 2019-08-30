@@ -1,8 +1,8 @@
 export enum Entity {
   AUTH = 'auth',
   USER = 'users',
-  POST = 'post',
-  TAG = 'tgg',
+  POST = 'posts',
+  TAG = 'tags',
   FILE = 'files',
 }
 
