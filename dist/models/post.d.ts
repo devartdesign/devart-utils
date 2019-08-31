@@ -9,3 +9,10 @@ export interface IPost {
     createdAt: Date;
     updatedAt: Date;
 }
+export interface IPostQuery {
+    year: number;
+    month: number;
+    day: number;
+    slug: string;
+}
+export declare const getFallbackPost: (postQuery?: IPostQuery) => IPost;
