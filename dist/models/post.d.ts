@@ -15,4 +15,9 @@ export interface IPostQuery {
     day: number;
     slug: string;
 }
+export interface IArchivePost {
+    year: number;
+    month: number;
+    total: number;
+}
 export declare const getFallbackPost: (postQuery?: IPostQuery) => IPost;
