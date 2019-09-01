@@ -68,6 +68,8 @@ exports.getPost_1 = () => ({
     month: 10,
     day: 10,
     slug: 'post-title-1',
+    user: exports.getUser_1(),
+    tags: [exports.getTag_1(), exports.getTag_2()],
     createdAt: exports.getTestDate('2019-10-10 00:00:00'),
     updatedAt: exports.getTestDate('2019-10-10 00:00:00'),
 });

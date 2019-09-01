@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const index_1 = require("./index");
 exports.getFallbackPost = (postQuery) => ({
     _id: null,
     title: '...',
@@ -7,6 +8,8 @@ exports.getFallbackPost = (postQuery) => ({
     year: null,
     month: null,
     day: null,
+    tags: [],
+    user: index_1.UserModel.getFallbackUser(),
     slug: '...',
     createdAt: null,
     updatedAt: null

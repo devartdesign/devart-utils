@@ -81,6 +81,8 @@ export const getPost_1 = (): PostModel.IPost => ({
   month: 10,
   day: 10,
   slug: 'post-title-1',
+  user: getUser_1(),
+  tags: [getTag_1(), getTag_2()],
   createdAt: getTestDate('2019-10-10 00:00:00'),
   updatedAt: getTestDate('2019-10-10 00:00:00'),
 });

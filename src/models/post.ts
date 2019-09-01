@@ -1,3 +1,5 @@
+import { TagModel, UserModel } from './index';
+
 export interface IPost {
   _id: number;
   title: string;
@@ -6,6 +8,8 @@ export interface IPost {
   month: number;
   day: number;
   slug: string;
+  tags: TagModel.ITag[];
+  user: UserModel.IUser;
   createdAt: Date;
   updatedAt: Date;
 }
@@ -30,6 +34,8 @@ export const getFallbackPost = (postQuery?: IPostQuery): IPost => ({
   year: null,
   month: null,
   day: null,
+  tags: [],
+  user: UserModel.getFallbackUser(),
   slug: '...',
   createdAt: null,
   updatedAt: null
