@@ -1,7 +1,7 @@
 {
-  "name": "opya-utils",
+  "name": "devart-utils",
   "version": "0.0.1",
-  "description": "opya utils",
+  "description": "devart utils",
   "main": "dist/index.js",
   "pre-commit": [
     "lint",
