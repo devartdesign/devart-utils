@@ -35,7 +35,7 @@ export declare const RegMap: {
     serverMention: RegExp;
 };
 export declare type IEntityMap<T> = {
-    [id: string]: T;
+    [id: number]: T;
 };
 export declare type SortDirection = 'ASC' | 'DESC';
 export interface IPagination<T> {

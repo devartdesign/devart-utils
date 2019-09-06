@@ -37,7 +37,7 @@ export const RegMap = {
   serverMention: /^@(\[.*\](\(.*\)))$/
 };
 
-export type IEntityMap<T> = { [id: string]: T };
+export type IEntityMap<T> = { [id: number]: T };
 
 export type SortDirection = 'ASC' | 'DESC';
 
