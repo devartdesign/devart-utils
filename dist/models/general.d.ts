@@ -54,3 +54,6 @@ export interface IApiQuery {
     fields?: string[];
     baseQuery?: any;
 }
+export interface ILoginResponse {
+    token: string;
+}
