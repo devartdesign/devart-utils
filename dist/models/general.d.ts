@@ -21,7 +21,7 @@ export declare const RegMap: {
 export declare type IEntityMap<T> = {
     [id: number]: T;
 };
-export declare type SortDirection = 'ASC' | 'DESC';
+export declare type SortDirection = 'asc' | 'desc';
 export interface IPagination<T> {
     count: number;
     page: number;

@@ -23,7 +23,7 @@ export const RegMap = {
 
 export type IEntityMap<T> = { [id: number]: T };
 
-export type SortDirection = 'ASC' | 'DESC';
+export type SortDirection = 'asc' | 'desc';
 
 export interface IPagination<T> {
   count: number;
