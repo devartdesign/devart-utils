@@ -8,28 +8,12 @@ export declare enum Entity {
 export declare const Color: {
     PRIMARY: string;
     SECONDARY: string;
-    LIGHT_SECONDARY: string;
-    LIGHT_BLUE: string;
-    BLUE_GRAY: string;
+    WHITE: string;
+    GRAY: string;
     LIGHT_GRAY: string;
     DARK_GRAY: string;
-    SUPER_DARK_GRAY: string;
-    RESOLVED_GRAY: string;
-    SEPTENARY: string;
-    OCTANARY: string;
-    NONARY: string;
-    DENARY: string;
-    BLACK: string;
-    WHITE: string;
-    GREEN: string;
-    AVAILABLE_GREEN: string;
-    WARN: string;
-    NEUTRAL: string;
-    PURPLE: string;
-    DEEP_PURPLE: string;
-    CASE_PURPLE: string;
-    SCHEDULE_PURPLE: string;
-    FAVORITE: string;
+    BLUE_GRAY: string;
+    RED_LIGHT: string;
 };
 export declare const RegMap: {
     serverMention: RegExp;
