@@ -18,7 +18,4 @@ exports.Color = {
     BLUE_GRAY: '#9FA7BC',
     RED_LIGHT: '#f44336'
 };
-exports.RegMap = {
-    serverMention: /^@(\[.*\](\(.*\)))$/
-};
 //# sourceMappingURL=general.js.map

@@ -15,9 +15,6 @@ export declare const Color: {
     BLUE_GRAY: string;
     RED_LIGHT: string;
 };
-export declare const RegMap: {
-    serverMention: RegExp;
-};
 export declare type IEntityMap<T> = {
     [id: number]: T;
 };
@@ -35,6 +32,7 @@ export interface IApiQuery {
     query?: string;
     sortBy?: string;
     sortDirection?: SortDirection;
+    searchQuery?: string;
     fields?: string[];
     baseQuery?: any;
 }

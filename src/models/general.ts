@@ -17,10 +17,6 @@ export const Color = {
   RED_LIGHT: '#f44336'
 };
 
-export const RegMap = {
-  serverMention: /^@(\[.*\](\(.*\)))$/
-};
-
 export type IEntityMap<T> = { [id: number]: T };
 
 export type SortDirection = 'asc' | 'desc';
@@ -39,6 +35,7 @@ export interface IApiQuery {
   query?: string;
   sortBy?: string;
   sortDirection?: SortDirection;
+  searchQuery?: string;
   fields?: string[];
   baseQuery?: any;
 }
