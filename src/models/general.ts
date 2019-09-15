@@ -9,12 +9,16 @@ export enum Entity {
 export const Color = {
   PRIMARY: '#29434e',
   SECONDARY: '#E1E2E1',
+  THERNARY: '#546e7a',
   WHITE: '#FFFFFF',
   GRAY: '#EEEEEE',
   LIGHT_GRAY: '#F5F5F6',
   DARK_GRAY: '#646565',
   BLUE_GRAY: '#9FA7BC',
-  RED_LIGHT: '#f44336'
+  RED_LIGHT: '#f44336',
+  GREEN: '#3AC6AB',
+  FAVORITE: '#FCBF00',
+  NONARY: '#C21E5D',
 };
 
 export type IEntityMap<T> = { [id: number]: T };

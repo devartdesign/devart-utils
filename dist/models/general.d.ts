@@ -8,12 +8,16 @@ export declare enum Entity {
 export declare const Color: {
     PRIMARY: string;
     SECONDARY: string;
+    THERNARY: string;
     WHITE: string;
     GRAY: string;
     LIGHT_GRAY: string;
     DARK_GRAY: string;
     BLUE_GRAY: string;
     RED_LIGHT: string;
+    GREEN: string;
+    FAVORITE: string;
+    NONARY: string;
 };
 export declare type IEntityMap<T> = {
     [id: number]: T;
