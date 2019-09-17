@@ -1,5 +1,5 @@
 import { UserModel, TagModel, FileModel, PostModel } from '../models';
-export declare const getTestDate: (date?: string | Date) => Date;
+export declare const getTestDate: (date?: string) => Date;
 export declare const getRole_1: () => UserModel.IRole;
 export declare const getRole_2: () => UserModel.IRole;
 export declare const getUser_1: () => UserModel.IUser;

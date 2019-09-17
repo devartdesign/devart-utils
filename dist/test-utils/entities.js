@@ -1,8 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const moment = require("moment-timezone");
 const models_1 = require("../models");
-exports.getTestDate = (date = '2019-03-05 11:01:45') => moment(date).tz('America/Los_Angeles').toDate();
+exports.getTestDate = (date = '2019-03-05 11:01:45') => new Date(Date.parse(date));
 exports.getRole_1 = () => ({
     _id: 'general',
     value: 'general',

@@ -1,5 +1,3 @@
-import * as moment from 'moment-timezone';
-
 import {
   UserModel,
   TagModel,
@@ -7,7 +5,7 @@ import {
   PostModel
 } from '../models';
 
-export const getTestDate = (date: Date | string = '2019-03-05 11:01:45'): Date => moment(date).tz('America/Los_Angeles').toDate();
+export const getTestDate = (date: string = '2019-03-05 11:01:45'): Date => new Date(Date.parse(date));
 
 export const getRole_1 = (): UserModel.IRole => ({
   _id: 'general',
