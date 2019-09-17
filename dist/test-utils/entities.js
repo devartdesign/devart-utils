@@ -14,7 +14,7 @@ exports.getRole_2 = () => ({
     short: 'ST'
 });
 exports.getUser_1 = () => ({
-    _id: '5521-47bb-9164e4c4-97fd-6521x-8123j921',
+    _id: 1,
     email: 'rgonzalez@devartdesign.com',
     name: 'Ramiro Gonzalez',
     firstname: 'Ramiro',
@@ -26,7 +26,7 @@ exports.getUser_1 = () => ({
     updatedAt: exports.getTestDate('2018-08-20 00:00:00'),
 });
 exports.getUser_2 = () => ({
-    _id: '9164e4c4-6521-47bb-97fd-c75ac02b2cf5',
+    _id: 2,
     email: 'pepe.lorenzo@devartdesign.com',
     name: 'Pepe Lorenzo',
     firstname: 'Pepe ',
@@ -72,5 +72,31 @@ exports.getPost_1 = () => ({
     tags: [exports.getTag_1(), exports.getTag_2()],
     createdAt: exports.getTestDate('2019-10-10 00:00:00'),
     updatedAt: exports.getTestDate('2019-10-10 00:00:00'),
+});
+exports.getPost_2 = () => ({
+    _id: 1,
+    title: 'post title two',
+    post: 'some post text another',
+    year: 2019,
+    month: 1,
+    day: 9,
+    slug: 'post-title-two',
+    user: exports.getUser_2(),
+    tags: [],
+    createdAt: exports.getTestDate('2019-9-1 00:00:00'),
+    updatedAt: exports.getTestDate('2019-9-1 00:00:00'),
+});
+exports.getPostList_1 = () => ([
+    exports.getPost_1(), exports.getPost_2()
+]);
+exports.getArchive_1 = () => ({
+    year: 2018,
+    month: 8,
+    total: 15
+});
+exports.getArchive_2 = () => ({
+    year: 2018,
+    month: 9,
+    total: 2
 });
 //# sourceMappingURL=entities.js.map

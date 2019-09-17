@@ -7,7 +7,7 @@ export interface IRole {
     short: string;
 }
 export interface IUser {
-    _id: string;
+    _id: number;
     email: string;
     name: string;
     avatar: string;
@@ -20,4 +20,4 @@ export interface IUser {
     updatedAt?: Date | string;
     deletedAt?: Date | string;
 }
-export declare const getFallbackUser: (_id?: string) => IUser;
+export declare const getFallbackUser: (_id?: number) => IUser;

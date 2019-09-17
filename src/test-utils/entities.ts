@@ -22,7 +22,7 @@ export const getRole_2 = (): UserModel.IRole => ({
 });
 
 export const getUser_1 = (): UserModel.IUser => ({
-  _id: '5521-47bb-9164e4c4-97fd-6521x-8123j921',
+  _id: 1,
   email: 'rgonzalez@devartdesign.com',
   name: 'Ramiro Gonzalez',
   firstname: 'Ramiro',
@@ -35,7 +35,7 @@ export const getUser_1 = (): UserModel.IUser => ({
 });
 
 export const getUser_2 = (): UserModel.IUser => ({
-  _id: '9164e4c4-6521-47bb-97fd-c75ac02b2cf5',
+  _id: 2,
   email: 'pepe.lorenzo@devartdesign.com',
   name: 'Pepe Lorenzo',
   firstname: 'Pepe ',
@@ -85,4 +85,34 @@ export const getPost_1 = (): PostModel.IPost => ({
   tags: [getTag_1(), getTag_2()],
   createdAt: getTestDate('2019-10-10 00:00:00'),
   updatedAt: getTestDate('2019-10-10 00:00:00'),
+});
+
+export const getPost_2 = (): PostModel.IPost => ({
+  _id: 1,
+  title: 'post title two',
+  post: 'some post text another',
+  year: 2019,
+  month: 1,
+  day: 9,
+  slug: 'post-title-two',
+  user: getUser_2(),
+  tags: [],
+  createdAt: getTestDate('2019-9-1 00:00:00'),
+  updatedAt: getTestDate('2019-9-1 00:00:00'),
+});
+
+export const getPostList_1 = (): PostModel.IPost[] => ([
+  getPost_1(), getPost_2()
+]);
+
+export const getArchive_1 = (): PostModel.IArchivePost => ({
+  year: 2018,
+  month: 8,
+  total: 15
+});
+
+export const getArchive_2 = (): PostModel.IArchivePost => ({
+  year: 2018,
+  month: 9,
+  total: 2
 });

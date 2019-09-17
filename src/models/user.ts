@@ -9,7 +9,7 @@ export interface IRole {
 }
 
 export interface IUser {
-  _id: string;
+  _id: number;
   email: string;
   name: string;
   avatar: string;
@@ -23,7 +23,7 @@ export interface IUser {
   deletedAt?: Date | string;
 }
 
-export const getFallbackUser = (_id?: string): IUser => ({
+export const getFallbackUser = (_id?: number): IUser => ({
   _id,
   avatar: 'https://www.fluigent.com/wp-content/uploads/2018/07/default-avatar-BW.png',
   email: '...',

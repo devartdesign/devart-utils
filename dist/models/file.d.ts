@@ -1,7 +1,7 @@
 export interface IFile {
     _id: string;
     filename: string;
-    createdById: string;
+    createdById: number;
     url: string;
     signedUrl: string;
     mimetype: string;
