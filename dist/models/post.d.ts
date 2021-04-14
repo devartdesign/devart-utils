@@ -1,6 +1,6 @@
 import { TagModel, UserModel } from './index';
 export interface IPost {
-    _id: number;
+    id: number;
     title: string;
     post: string;
     year: number;

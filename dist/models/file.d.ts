@@ -1,5 +1,5 @@
 export interface IFile {
-    _id: string;
+    id: string;
     filename: string;
     createdById: number;
     url: string;

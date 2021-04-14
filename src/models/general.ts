@@ -20,30 +20,53 @@ export const Color = {
   FAVORITE: '#FCBF00',
   NONARY: '#C21E5D',
 };
+export type IEntityMap<T> = { [id: string]: T };
 
-export type IEntityMap<T> = { [id: number]: T };
+export type Nullable<T> = T | null;
 
-export type SortDirection = 'asc' | 'desc';
+export enum ToastType {
+  SUCCESS = 'success',
+  WARN = 'warning',
+  ERROR = 'error',
+  INFO = 'info'
+}
 
 export interface IPagination<T> {
-  count: number;
+  items: T[];
   page: number;
   limit: number;
-  totalPages: number;
-  docs: T[];
+  total: number;
 }
+
+export type OrderType = 'asc' | 'desc';
 
 export interface IApiQuery {
   page?: number;
   limit?: number;
   query?: string;
-  sortBy?: string;
-  sortDirection?: SortDirection;
-  searchQuery?: string;
-  fields?: string[];
-  baseQuery?: any;
+  sort?: string;
+  order?: OrderType;
+}
+
+export interface IOptionRequest {
+  method: string;
+  body?: any;
+  query?: IApiQuery;
+  headers?: { [key: string]: any };
+}
+
+export interface ILoadingStatus {
+  isLoading: boolean;
+  hasError: boolean;
+  error: any;
+  traceId?: string;
 }
 
 export interface ILoginResponse {
   token: string;
+}
+
+export interface ILoginRequest {
+  username: string;
+  password: string;
 }

@@ -22,4 +22,11 @@ exports.Color = {
     FAVORITE: '#FCBF00',
     NONARY: '#C21E5D',
 };
+var ToastType;
+(function (ToastType) {
+    ToastType["SUCCESS"] = "success";
+    ToastType["WARN"] = "warning";
+    ToastType["ERROR"] = "error";
+    ToastType["INFO"] = "info";
+})(ToastType = exports.ToastType || (exports.ToastType = {}));
 //# sourceMappingURL=general.js.map

@@ -24,17 +24,17 @@ describe('listToMap', () => {
   it('should map the array to an empty object', () => {
     initialList = [getUser_1(), getUser_2()];
     initialMap = {};
-    expect(listToMap(initialList, initialMap)).to.deep.equal({ [getUser_1()._id]: getUser_1(), [getUser_2()._id]: getUser_2() });
+    expect(listToMap(initialList, initialMap)).to.deep.equal({ [getUser_1().id]: getUser_1(), [getUser_2().id]: getUser_2() });
   });
 
   it('should append an item to an existent map', () => {
     initialList = [getUser_3()];
-    initialMap = { [getUser_1()._id]: getUser_1(), [getUser_2()._id]: getUser_2() };
+    initialMap = { [getUser_1().id]: getUser_1(), [getUser_2().id]: getUser_2() };
 
     expect(listToMap(initialList, initialMap)).to.deep.equal({
-      [getUser_1()._id]: getUser_1(),
-      [getUser_2()._id]: getUser_2(),
-      [getUser_3()._id]: getUser_3()
+      [getUser_1().id]: getUser_1(),
+      [getUser_2().id]: getUser_2(),
+      [getUser_3().id]: getUser_3()
     });
   });
 

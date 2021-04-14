@@ -1,7 +1,7 @@
 import { TagModel, UserModel } from './index';
 
 export interface IPost {
-  _id: number;
+  id: number;
   title: string;
   post: string;
   year: number;
@@ -28,7 +28,7 @@ export interface IArchivePost {
 }
 
 export const getFallbackPost = (postQuery?: IPostQuery): IPost => ({
-  _id: null,
+  id: null,
   title: '...',
   post: '...',
   year: null,

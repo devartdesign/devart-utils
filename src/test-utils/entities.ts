@@ -7,48 +7,46 @@ import {
 
 export const getTestDate = (date: string = '2019-03-05 11:01:45'): Date => new Date(Date.parse(date));
 
-export const getRole_1 = (): UserModel.IRole => ({
-  _id: 'general',
-  value: 'general',
-  short: 'GE'
-});
-
-export const getRole_2 = (): UserModel.IRole => ({
-  _id: 'speech',
-  value: 'Speech Therapist',
-  short: 'ST'
-});
-
 export const getUser_1 = (): UserModel.IUser => ({
-  _id: 1,
+  id: 1,
   email: 'rgonzalez@devartdesign.com',
   name: 'Ramiro Gonzalez',
   firstname: 'Ramiro',
   lastname: 'Gonzalez',
   avatar: 'https://lh4.googleusercontent.com/-WUY2PDwnKZk/AAAAAAAAAAI/AAAAAAAAAAc/1UMlOKImKRA/photo.jpg',
   location: 'ar',
-  acl: [UserModel.ACL.ADMIN],
   createdAt: getTestDate('2018-05-23 00:00:00'),
   updatedAt: getTestDate('2018-08-20 00:00:00'),
 });
 
 export const getUser_2 = (): UserModel.IUser => ({
-  _id: 2,
+  id: 2,
   email: 'pepe.lorenzo@devartdesign.com',
   name: 'Pepe Lorenzo',
   firstname: 'Pepe ',
   lastname: 'Lorenzo',
   avatar: 'https://lh4.googleusercontent.com/-WUY2PDwnKZk/AAAAAAAAAAI/AAAAAAAAAAc/1UMlOKImKRA/photo.jpg',
   location: 'sf',
-  acl: [],
   createdAt: getTestDate('2018-03-05 11:01:45'),
   updatedAt: getTestDate('2018-03-05 11:01:45')
 });
 
+export const getUser_3 = (): UserModel.IUser => ({
+  id: 3,
+  email: 'lorenzo.lamas@devartdesign.com',
+  name: 'Lorenzo Lamas',
+  firstname: 'Lamas',
+  lastname: 'Lorenzo',
+  avatar: 'https://lh4.googleusercontent.com/-WUY2PDwnKZk/AAAAAAAAAAI/AAAAAAAAAAc/1UMlOKImKRA/photo.jpg',
+  location: 'sf',
+  createdAt: getTestDate('2018-03-07 11:05:00'),
+  updatedAt: getTestDate('2018-03-07 11:05:00')
+});
+
 export const getFileMessage = (): FileModel.IFile => ({
-  _id: 'aac1f7ed-ee67-480c-bd0f-8ad5c6d4fc35',
+  id: 'aac1f7ed-ee67-480c-bd0f-8ad5c6d4fc35',
   filename: 'SampleVideo_360x240_1mb.mp4',
-  createdById: getUser_1()._id,
+  createdById: getUser_1().id,
   url: 'https://s3-us-west-1.amazonaws.com/attachements-opya/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4',
   signedUrl: 'https://attachements-opya.s3.us-west-1.amazonaws.com/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4?AWSAccessKeyId=AKIAIJ4RCARVQQMXLMGQ&Expires=1538262284&Signature=ZWoodIoMsdQNfscUWVrV9UokaHc%3D', // tslint:disable-line
   mimetype: 'video/mp4',
@@ -61,18 +59,18 @@ export const getFileMessage = (): FileModel.IFile => ({
 });
 
 export const getTag_1 = (): TagModel.ITag => ({
-  _id: 1,
+  id: 1,
   name: 'tag_1',
   description: 'description tag 1'
 });
 
 export const getTag_2 = (): TagModel.ITag => ({
-  _id: 2,
+  id: 2,
   name: 'tag_2'
 });
 
 export const getPost_1 = (): PostModel.IPost => ({
-  _id: 1,
+  id: 1,
   title: 'post title 1',
   post: 'some post text',
   year: 2019,
@@ -86,7 +84,7 @@ export const getPost_1 = (): PostModel.IPost => ({
 });
 
 export const getPost_2 = (): PostModel.IPost => ({
-  _id: 1,
+  id: 1,
   title: 'post title two',
   post: 'some post text another',
   year: 2019,

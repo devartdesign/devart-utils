@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const index_1 = require("./index");
 exports.getFallbackPost = (postQuery) => ({
-    _id: null,
+    id: null,
     title: '...',
     post: '...',
     year: null,
