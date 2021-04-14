@@ -84,7 +84,7 @@ export const getPost_1 = (): PostModel.IPost => ({
 });
 
 export const getPost_2 = (): PostModel.IPost => ({
-  id: 1,
+  id: 2,
   title: 'post title two',
   post: 'some post text another',
   year: 2019,

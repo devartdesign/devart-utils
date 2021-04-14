@@ -71,7 +71,7 @@ exports.getPost_1 = () => ({
     updatedAt: exports.getTestDate('2019-10-10 00:00:00'),
 });
 exports.getPost_2 = () => ({
-    id: 1,
+    id: 2,
     title: 'post title two',
     post: 'some post text another',
     year: 2019,
