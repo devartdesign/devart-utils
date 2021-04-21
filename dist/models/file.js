@@ -7,7 +7,7 @@ var FileStatus;
     FileStatus[FileStatus["SUCCESS"] = 2] = "SUCCESS";
     FileStatus[FileStatus["FAIL"] = 3] = "FAIL";
 })(FileStatus = exports.FileStatus || (exports.FileStatus = {}));
-exports.getFallbackFile = (file, uploadId = null, status = FileStatus.INACTIVE, error = null) => ({
+exports.getFallbackFile = ({ file, uploadId = null, status = FileStatus.INACTIVE, error = null }) => ({
     id: `${Date.now()}-${file.name}`,
     uploadId,
     file: file,

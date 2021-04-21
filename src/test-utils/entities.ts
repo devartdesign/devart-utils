@@ -23,11 +23,23 @@ export const getUser_1 = (): UserModel.IUser => ({
   name: 'Ramiro',
 });
 
+export const getUser_2 = (): UserModel.IUser => ({
+  id: 2,
+  email: 'teresa@devartdesign.com',
+  name: 'Teresa',
+});
+
 export const getTag_1 = (): TagModel.ITag => ({
   id: 1,
   name: 'tag name',
   description: 'tag description'
-})
+});
+
+export const getTag_2 = (): TagModel.ITag => ({
+  id: 2,
+  name: 'tag name 2',
+  description: 'tag description 2'
+});
 
 export const getPost_1 = (): PostModel.IPost => ({
   id: 1,
@@ -84,26 +96,26 @@ export const getFile_4 = (): Partial<File> => ({
 });
 
 export const getUploadFile_1 = (): FileModel.IFile => ({
-  ...FileModel.getFallbackFile(getFile_1() as any, 'test-upload-id'),
+  ...FileModel.getFallbackFile({ file: getFile_1() as any, uploadId: 'test-upload-id' }),
   id: 'upload-id-1',
   status: 0
 });
 
 export const getUploadFile_2 = (): FileModel.IFile => ({
-  ...FileModel.getFallbackFile(getFile_2() as any, 'test-upload-id'),
+  ...FileModel.getFallbackFile({ file: getFile_2() as any, uploadId: 'test-upload-id' }),
   id: 'upload-id-2',
   status: FileModel.FileStatus.PROGRESS
 });
 
 export const getUploadFile_3 = (): FileModel.IFile => ({
-  ...FileModel.getFallbackFile(getFile_2() as any, 'test-upload-id'),
+  ...FileModel.getFallbackFile({ file: getFile_2() as any, uploadId: 'test-upload-id' }),
   id: 'upload-id-3',
   progress: 100,
   status: FileModel.FileStatus.FAIL
 });
 
 export const getUploadFile_4 = (): FileModel.IFile => ({
-  ...FileModel.getFallbackFile(getFile_3() as any, 'test-upload-id'),
+  ...FileModel.getFallbackFile({ file: getFile_3() as any, uploadId: 'test-upload-id'} ),
   id: 'upload-id-4',
   progress: 0,
   status: FileModel.FileStatus.FAIL,
@@ -111,7 +123,7 @@ export const getUploadFile_4 = (): FileModel.IFile => ({
 });
 
 export const getUploadFile_5 = (): FileModel.IFile => ({
-  ...FileModel.getFallbackFile(getFile_4() as any, 'test-upload-id'),
+  ...FileModel.getFallbackFile({ file: getFile_4() as any, uploadId: 'test-upload-id'} ),
   id: 'upload-id-5',
   progress: 0,
   status: FileModel.FileStatus.INACTIVE,
@@ -123,6 +135,15 @@ export const getAlbum_1 = (): AlbumModel.IAlbum => ({
   title: 'album 1',
   dirName: 'path/to/album',
   description: 'description',
+  date: '2021-10-10',
+  images: []
+});
+
+export const getAlbum_2 = (): AlbumModel.IAlbum => ({
+  id: 2,
+  title: 'album 2',
+  dirName: 'path/to/album/2',
+  description: 'description 2',
   date: '2021-10-10',
   images: []
 });

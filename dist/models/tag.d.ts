@@ -4,4 +4,4 @@ export interface ITag {
     name: Nullable<string>;
     description: Nullable<string>;
 }
-export declare const getFallbackTag: () => ITag;
+export declare const getFallbackTag: ({ name, description }: Partial<ITag>) => ITag;

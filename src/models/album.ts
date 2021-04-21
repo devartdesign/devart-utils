@@ -38,9 +38,9 @@ export const getFallbackAlbum = (): IAlbum => ({
   images: []
 });
 
-export const getFallbackAlbumImage = (): IAlbumImage => ({
+export const getFallbackAlbumImage = ({ name = '' }: Partial<IAlbumImage>): IAlbumImage => ({
   id: null,
-  name: null,
+  name,
   mimeType: null,
   size: null,
   path: null,

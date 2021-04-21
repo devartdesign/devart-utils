@@ -8,9 +8,9 @@ exports.getFallbackAlbum = () => ({
     date: null,
     images: []
 });
-exports.getFallbackAlbumImage = () => ({
+exports.getFallbackAlbumImage = ({ name = '' }) => ({
     id: null,
-    name: null,
+    name,
     mimeType: null,
     size: null,
     path: null,

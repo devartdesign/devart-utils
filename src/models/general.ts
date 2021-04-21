@@ -2,12 +2,6 @@ export type IEntityMap<T> = { [id: string]: T };
 
 export type Nullable<T> = T | null;
 
-export enum ToastType {
-  SUCCESS = 'success',
-  WARN = 'warning',
-  ERROR = 'error',
-  INFO = 'info'
-}
 export interface IPagination<T> {
   items: T[];
   page: number;

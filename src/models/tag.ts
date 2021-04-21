@@ -6,8 +6,8 @@ export interface ITag {
   description: Nullable<string>;
 }
 
-export const getFallbackTag = (): ITag => ({
+export const getFallbackTag = ({ name = '', description = '' }: Partial<ITag>): ITag => ({
   id: null,
-  name: '',
-  description: ''
+  name,
+  description
 });

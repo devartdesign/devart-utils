@@ -25,4 +25,4 @@ export interface IAlbumQuery {
     slug: string;
 }
 export declare const getFallbackAlbum: () => IAlbum;
-export declare const getFallbackAlbumImage: () => IAlbumImage;
+export declare const getFallbackAlbumImage: ({ name }: Partial<IAlbumImage>) => IAlbumImage;

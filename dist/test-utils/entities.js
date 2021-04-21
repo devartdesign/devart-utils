@@ -14,10 +14,20 @@ exports.getUser_1 = () => ({
     email: 'rgonzalez@devartdesign.com',
     name: 'Ramiro',
 });
+exports.getUser_2 = () => ({
+    id: 2,
+    email: 'teresa@devartdesign.com',
+    name: 'Teresa',
+});
 exports.getTag_1 = () => ({
     id: 1,
     name: 'tag name',
     description: 'tag description'
+});
+exports.getTag_2 = () => ({
+    id: 2,
+    name: 'tag name 2',
+    description: 'tag description 2'
 });
 exports.getPost_1 = () => ({
     id: 1,
@@ -67,16 +77,24 @@ exports.getFile_4 = () => ({
     size: 237812932102,
     type: 'executable'
 });
-exports.getUploadFile_1 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_1(), 'test-upload-id'), { id: 'upload-id-1', status: 0 }));
-exports.getUploadFile_2 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_2(), 'test-upload-id'), { id: 'upload-id-2', status: models_1.FileModel.FileStatus.PROGRESS }));
-exports.getUploadFile_3 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_2(), 'test-upload-id'), { id: 'upload-id-3', progress: 100, status: models_1.FileModel.FileStatus.FAIL }));
-exports.getUploadFile_4 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_3(), 'test-upload-id'), { id: 'upload-id-4', progress: 0, status: models_1.FileModel.FileStatus.FAIL, error: 'Server Error' }));
-exports.getUploadFile_5 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_4(), 'test-upload-id'), { id: 'upload-id-5', progress: 0, status: models_1.FileModel.FileStatus.INACTIVE, error: null }));
+exports.getUploadFile_1 = () => (Object.assign({}, models_1.FileModel.getFallbackFile({ file: exports.getFile_1(), uploadId: 'test-upload-id' }), { id: 'upload-id-1', status: 0 }));
+exports.getUploadFile_2 = () => (Object.assign({}, models_1.FileModel.getFallbackFile({ file: exports.getFile_2(), uploadId: 'test-upload-id' }), { id: 'upload-id-2', status: models_1.FileModel.FileStatus.PROGRESS }));
+exports.getUploadFile_3 = () => (Object.assign({}, models_1.FileModel.getFallbackFile({ file: exports.getFile_2(), uploadId: 'test-upload-id' }), { id: 'upload-id-3', progress: 100, status: models_1.FileModel.FileStatus.FAIL }));
+exports.getUploadFile_4 = () => (Object.assign({}, models_1.FileModel.getFallbackFile({ file: exports.getFile_3(), uploadId: 'test-upload-id' }), { id: 'upload-id-4', progress: 0, status: models_1.FileModel.FileStatus.FAIL, error: 'Server Error' }));
+exports.getUploadFile_5 = () => (Object.assign({}, models_1.FileModel.getFallbackFile({ file: exports.getFile_4(), uploadId: 'test-upload-id' }), { id: 'upload-id-5', progress: 0, status: models_1.FileModel.FileStatus.INACTIVE, error: null }));
 exports.getAlbum_1 = () => ({
     id: 1,
     title: 'album 1',
     dirName: 'path/to/album',
     description: 'description',
+    date: '2021-10-10',
+    images: []
+});
+exports.getAlbum_2 = () => ({
+    id: 2,
+    title: 'album 2',
+    dirName: 'path/to/album/2',
+    description: 'description 2',
     date: '2021-10-10',
     images: []
 });

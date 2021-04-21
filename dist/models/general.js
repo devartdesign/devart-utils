@@ -1,12 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ToastType;
-(function (ToastType) {
-    ToastType["SUCCESS"] = "success";
-    ToastType["WARN"] = "warning";
-    ToastType["ERROR"] = "error";
-    ToastType["INFO"] = "info";
-})(ToastType = exports.ToastType || (exports.ToastType = {}));
 var DateFormat;
 (function (DateFormat) {
     DateFormat[DateFormat["DATE"] = 0] = "DATE";
