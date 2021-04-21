@@ -126,3 +126,15 @@ export const getAlbum_1 = (): AlbumModel.IAlbum => ({
   date: '2021-10-10',
   images: []
 });
+
+export const getArchive_1 = (): PostModel.IArchivePost => ({
+  year: 2018,
+  month: 8,
+  total: 15
+});
+
+export const getArchive_2 = (): PostModel.IArchivePost => ({
+  year: 2018,
+  month: 9,
+  total: 2
+});
