@@ -26,9 +26,9 @@ export interface IPostRequest {
 }
 
 export interface IPostQuery {
-  year: number;
-  month: number;
-  day: number;
+  year: string;
+  month: string;
+  day: string;
   slug: string;
 }
 

@@ -23,9 +23,9 @@ export interface IPostRequest {
     isPublished: boolean;
 }
 export interface IPostQuery {
-    year: number;
-    month: number;
-    day: number;
+    year: string;
+    month: string;
+    day: string;
     slug: string;
 }
 export interface IArchivePost {
