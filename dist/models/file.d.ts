@@ -1,15 +1,15 @@
+export declare enum FileStatus {
+    INACTIVE = 0,
+    PROGRESS = 1,
+    SUCCESS = 2,
+    FAIL = 3
+}
 export interface IFile {
     id: string;
-    filename: string;
-    createdById: number;
-    url: string;
-    signedUrl: string;
-    mimetype: string;
-    size: number;
-    thumbnailUrl: string;
-    thumbnailSignedUrl: string;
-    metadata: any;
-    createdAt: Date | string;
-    updatedAt: Date | string;
-    deletedAt?: Date | string;
+    uploadId: string;
+    file: File;
+    progress: number;
+    status: FileStatus;
+    error: any;
 }
+export declare const getFallbackFile: (file: File, uploadId?: string, status?: FileStatus, error?: any) => IFile;

@@ -1,27 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Entity;
-(function (Entity) {
-    Entity["AUTH"] = "auth";
-    Entity["USER"] = "users";
-    Entity["POST"] = "posts";
-    Entity["TAG"] = "tags";
-    Entity["FILE"] = "files";
-})(Entity = exports.Entity || (exports.Entity = {}));
-exports.Color = {
-    PRIMARY: '#29434e',
-    SECONDARY: '#E1E2E1',
-    THERNARY: '#546e7a',
-    WHITE: '#FFFFFF',
-    GRAY: '#EEEEEE',
-    LIGHT_GRAY: '#F5F5F6',
-    DARK_GRAY: '#646565',
-    BLUE_GRAY: '#9FA7BC',
-    RED_LIGHT: '#f44336',
-    GREEN: '#3AC6AB',
-    FAVORITE: '#FCBF00',
-    NONARY: '#C21E5D',
-};
 var ToastType;
 (function (ToastType) {
     ToastType["SUCCESS"] = "success";
@@ -29,4 +7,23 @@ var ToastType;
     ToastType["ERROR"] = "error";
     ToastType["INFO"] = "info";
 })(ToastType = exports.ToastType || (exports.ToastType = {}));
+var DateFormat;
+(function (DateFormat) {
+    DateFormat[DateFormat["DATE"] = 0] = "DATE";
+    DateFormat[DateFormat["DATE_TEXT"] = 1] = "DATE_TEXT";
+    DateFormat[DateFormat["DATE_MONTH"] = 2] = "DATE_MONTH";
+    DateFormat[DateFormat["MONTH_YEAR"] = 3] = "MONTH_YEAR";
+    DateFormat[DateFormat["DATE_TIME"] = 4] = "DATE_TIME";
+    DateFormat[DateFormat["NUMERIC_DATE"] = 5] = "NUMERIC_DATE";
+    DateFormat[DateFormat["DASHED_NUMERIC"] = 6] = "DASHED_NUMERIC";
+})(DateFormat = exports.DateFormat || (exports.DateFormat = {}));
+exports.dateFormatMap = {
+    [DateFormat.DATE]: 'MMM DD, YYYY',
+    [DateFormat.DATE_TEXT]: 'MMMM DD, YYYY',
+    [DateFormat.DATE_MONTH]: 'DD MMM',
+    [DateFormat.MONTH_YEAR]: 'MMMM YYYY',
+    [DateFormat.DATE_TIME]: 'MMM DD, YYYY hh:mm a',
+    [DateFormat.NUMERIC_DATE]: 'MM/DD/YYYY',
+    [DateFormat.DASHED_NUMERIC]: 'YYYY-MM-DD'
+};
 //# sourceMappingURL=general.js.map

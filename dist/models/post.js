@@ -1,17 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const index_1 = require("./index");
-exports.getFallbackPost = (postQuery) => ({
+exports.getFallbackPost = () => ({
     id: null,
-    title: '...',
-    post: '...',
+    title: '',
+    post: '',
     year: null,
     month: null,
     day: null,
+    slug: null,
     tags: [],
-    user: index_1.UserModel.getFallbackUser(),
-    slug: '...',
-    createdAt: null,
-    updatedAt: null
+    user: null,
+    isPublished: false,
+    created_at: null,
+    updated_at: null
 });
 //# sourceMappingURL=post.js.map

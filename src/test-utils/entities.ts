@@ -2,113 +2,127 @@ import {
   UserModel,
   TagModel,
   FileModel,
-  PostModel
+  PostModel,
+  AlbumModel,
+  GeneralModel
 } from '../models';
 
-export const getTestDate = (date: string = '2019-03-05 11:01:45'): Date => new Date(Date.parse(date));
+export const getLoginResponse = (): GeneralModel.ILoginResponse => ({
+  token: 'token-string'
+});
+
+export const getLoading = (): GeneralModel.ILoadingStatus => ({
+  isLoading: false,
+  hasError: false,
+  error: null
+});
 
 export const getUser_1 = (): UserModel.IUser => ({
   id: 1,
   email: 'rgonzalez@devartdesign.com',
-  name: 'Ramiro Gonzalez',
-  firstname: 'Ramiro',
-  lastname: 'Gonzalez',
-  avatar: 'https://lh4.googleusercontent.com/-WUY2PDwnKZk/AAAAAAAAAAI/AAAAAAAAAAc/1UMlOKImKRA/photo.jpg',
-  location: 'ar',
-  createdAt: getTestDate('2018-05-23 00:00:00'),
-  updatedAt: getTestDate('2018-08-20 00:00:00'),
-});
-
-export const getUser_2 = (): UserModel.IUser => ({
-  id: 2,
-  email: 'pepe.lorenzo@devartdesign.com',
-  name: 'Pepe Lorenzo',
-  firstname: 'Pepe ',
-  lastname: 'Lorenzo',
-  avatar: 'https://lh4.googleusercontent.com/-WUY2PDwnKZk/AAAAAAAAAAI/AAAAAAAAAAc/1UMlOKImKRA/photo.jpg',
-  location: 'sf',
-  createdAt: getTestDate('2018-03-05 11:01:45'),
-  updatedAt: getTestDate('2018-03-05 11:01:45')
-});
-
-export const getUser_3 = (): UserModel.IUser => ({
-  id: 3,
-  email: 'lorenzo.lamas@devartdesign.com',
-  name: 'Lorenzo Lamas',
-  firstname: 'Lamas',
-  lastname: 'Lorenzo',
-  avatar: 'https://lh4.googleusercontent.com/-WUY2PDwnKZk/AAAAAAAAAAI/AAAAAAAAAAc/1UMlOKImKRA/photo.jpg',
-  location: 'sf',
-  createdAt: getTestDate('2018-03-07 11:05:00'),
-  updatedAt: getTestDate('2018-03-07 11:05:00')
-});
-
-export const getFileMessage = (): FileModel.IFile => ({
-  id: 'aac1f7ed-ee67-480c-bd0f-8ad5c6d4fc35',
-  filename: 'SampleVideo_360x240_1mb.mp4',
-  createdById: getUser_1().id,
-  url: 'https://s3-us-west-1.amazonaws.com/attachements-opya/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4',
-  signedUrl: 'https://attachements-opya.s3.us-west-1.amazonaws.com/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4?AWSAccessKeyId=AKIAIJ4RCARVQQMXLMGQ&Expires=1538262284&Signature=ZWoodIoMsdQNfscUWVrV9UokaHc%3D', // tslint:disable-line
-  mimetype: 'video/mp4',
-  size: 1053651,
-  metadata: {},
-  thumbnailUrl: 'https://s3-us-west-1.amazonaws.com/attachements-opya/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4',
-  thumbnailSignedUrl: 'https://attachements-opya.s3.us-west-1.amazonaws.com/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4?AWSAccessKeyId=AKIAIJ4RCARVQQMXLMGQ&Expires=1538262284&Signature=ZWoodIoMsdQNfscUWVrV9UokaHc%3D', // tslint:disable-line
-  createdAt: '',
-  updatedAt: '',
+  name: 'Ramiro',
 });
 
 export const getTag_1 = (): TagModel.ITag => ({
   id: 1,
-  name: 'tag_1',
-  description: 'description tag 1'
-});
-
-export const getTag_2 = (): TagModel.ITag => ({
-  id: 2,
-  name: 'tag_2'
-});
+  name: 'tag name',
+  description: 'tag description'
+})
 
 export const getPost_1 = (): PostModel.IPost => ({
   id: 1,
-  title: 'post title 1',
-  post: 'some post text',
-  year: 2019,
-  month: 10,
-  day: 10,
-  slug: 'post-title-1',
+  title: 'post title',
+  post: 'post content',
+  year: 2021,
+  month: 4,
+  day: 16,
+  slug: 'post-title',
+  tags: [],
   user: getUser_1(),
-  tags: [getTag_1(), getTag_2()],
-  createdAt: getTestDate('2019-10-10 00:00:00'),
-  updatedAt: getTestDate('2019-10-10 00:00:00'),
+  isPublished: true,
+  created_at: '2021-04-18',
+  updated_at: '2021-04-18',
 });
 
 export const getPost_2 = (): PostModel.IPost => ({
   id: 2,
-  title: 'post title two',
-  post: 'some post text another',
-  year: 2019,
-  month: 1,
-  day: 9,
-  slug: 'post-title-two',
-  user: getUser_2(),
-  tags: [],
-  createdAt: getTestDate('2019-9-1 00:00:00'),
-  updatedAt: getTestDate('2019-9-1 00:00:00'),
+  title: 'post title 2',
+  post: 'post content 2',
+  year: 2021,
+  month: 4,
+  day: 15,
+  slug: 'post-title-2',
+  tags: [getTag_1()],
+  user: getUser_1(),
+  isPublished: false,
+  created_at: '2021-04-18',
+  updated_at: '2021-04-18'
 });
 
-export const getPostList_1 = (): PostModel.IPost[] => ([
-  getPost_1(), getPost_2()
-]);
-
-export const getArchive_1 = (): PostModel.IArchivePost => ({
-  year: 2018,
-  month: 8,
-  total: 15
+export const getFile_1 = (): Partial<File> => ({
+  name: 'test.png',
+  size: 13290,
+  type: 'images/png'
 });
 
-export const getArchive_2 = (): PostModel.IArchivePost => ({
-  year: 2018,
-  month: 9,
-  total: 2
+export const getFile_2 = (): Partial<File> => ({
+  name: 'test-2.jpg',
+  size: 12902,
+  type: 'images/jpeg'
+});
+
+export const getFile_3 = (): Partial<File> => ({
+  name: 'test.exe',
+  size: 400,
+  type: 'executable'
+});
+
+export const getFile_4 = (): Partial<File> => ({
+  name: 'test.png',
+  size: 237812932102,
+  type: 'executable'
+});
+
+export const getUploadFile_1 = (): FileModel.IFile => ({
+  ...FileModel.getFallbackFile(getFile_1() as any, 'test-upload-id'),
+  id: 'upload-id-1',
+  status: 0
+});
+
+export const getUploadFile_2 = (): FileModel.IFile => ({
+  ...FileModel.getFallbackFile(getFile_2() as any, 'test-upload-id'),
+  id: 'upload-id-2',
+  status: FileModel.FileStatus.PROGRESS
+});
+
+export const getUploadFile_3 = (): FileModel.IFile => ({
+  ...FileModel.getFallbackFile(getFile_2() as any, 'test-upload-id'),
+  id: 'upload-id-3',
+  progress: 100,
+  status: FileModel.FileStatus.FAIL
+});
+
+export const getUploadFile_4 = (): FileModel.IFile => ({
+  ...FileModel.getFallbackFile(getFile_3() as any, 'test-upload-id'),
+  id: 'upload-id-4',
+  progress: 0,
+  status: FileModel.FileStatus.FAIL,
+  error: 'Server Error'
+});
+
+export const getUploadFile_5 = (): FileModel.IFile => ({
+  ...FileModel.getFallbackFile(getFile_4() as any, 'test-upload-id'),
+  id: 'upload-id-5',
+  progress: 0,
+  status: FileModel.FileStatus.INACTIVE,
+  error: null
+});
+
+export const getAlbum_1 = (): AlbumModel.IAlbum => ({
+  id: 1,
+  title: 'album 1',
+  dirName: 'path/to/album',
+  description: 'description',
+  date: '2021-10-10',
+  images: []
 });

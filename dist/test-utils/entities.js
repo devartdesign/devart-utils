@@ -1,99 +1,83 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getTestDate = (date = '2019-03-05 11:01:45') => new Date(Date.parse(date));
+const models_1 = require("../models");
+exports.getLoginResponse = () => ({
+    token: 'token-string'
+});
+exports.getLoading = () => ({
+    isLoading: false,
+    hasError: false,
+    error: null
+});
 exports.getUser_1 = () => ({
     id: 1,
     email: 'rgonzalez@devartdesign.com',
-    name: 'Ramiro Gonzalez',
-    firstname: 'Ramiro',
-    lastname: 'Gonzalez',
-    avatar: 'https://lh4.googleusercontent.com/-WUY2PDwnKZk/AAAAAAAAAAI/AAAAAAAAAAc/1UMlOKImKRA/photo.jpg',
-    location: 'ar',
-    createdAt: exports.getTestDate('2018-05-23 00:00:00'),
-    updatedAt: exports.getTestDate('2018-08-20 00:00:00'),
-});
-exports.getUser_2 = () => ({
-    id: 2,
-    email: 'pepe.lorenzo@devartdesign.com',
-    name: 'Pepe Lorenzo',
-    firstname: 'Pepe ',
-    lastname: 'Lorenzo',
-    avatar: 'https://lh4.googleusercontent.com/-WUY2PDwnKZk/AAAAAAAAAAI/AAAAAAAAAAc/1UMlOKImKRA/photo.jpg',
-    location: 'sf',
-    createdAt: exports.getTestDate('2018-03-05 11:01:45'),
-    updatedAt: exports.getTestDate('2018-03-05 11:01:45')
-});
-exports.getUser_3 = () => ({
-    id: 3,
-    email: 'lorenzo.lamas@devartdesign.com',
-    name: 'Lorenzo Lamas',
-    firstname: 'Lamas',
-    lastname: 'Lorenzo',
-    avatar: 'https://lh4.googleusercontent.com/-WUY2PDwnKZk/AAAAAAAAAAI/AAAAAAAAAAc/1UMlOKImKRA/photo.jpg',
-    location: 'sf',
-    createdAt: exports.getTestDate('2018-03-07 11:05:00'),
-    updatedAt: exports.getTestDate('2018-03-07 11:05:00')
-});
-exports.getFileMessage = () => ({
-    id: 'aac1f7ed-ee67-480c-bd0f-8ad5c6d4fc35',
-    filename: 'SampleVideo_360x240_1mb.mp4',
-    createdById: exports.getUser_1().id,
-    url: 'https://s3-us-west-1.amazonaws.com/attachements-opya/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4',
-    signedUrl: 'https://attachements-opya.s3.us-west-1.amazonaws.com/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4?AWSAccessKeyId=AKIAIJ4RCARVQQMXLMGQ&Expires=1538262284&Signature=ZWoodIoMsdQNfscUWVrV9UokaHc%3D',
-    mimetype: 'video/mp4',
-    size: 1053651,
-    metadata: {},
-    thumbnailUrl: 'https://s3-us-west-1.amazonaws.com/attachements-opya/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4',
-    thumbnailSignedUrl: 'https://attachements-opya.s3.us-west-1.amazonaws.com/153825960050805725888429932773/SampleVideo_360x240_1mb.mp4?AWSAccessKeyId=AKIAIJ4RCARVQQMXLMGQ&Expires=1538262284&Signature=ZWoodIoMsdQNfscUWVrV9UokaHc%3D',
-    createdAt: '',
-    updatedAt: '',
+    name: 'Ramiro',
 });
 exports.getTag_1 = () => ({
     id: 1,
-    name: 'tag_1',
-    description: 'description tag 1'
-});
-exports.getTag_2 = () => ({
-    id: 2,
-    name: 'tag_2'
+    name: 'tag name',
+    description: 'tag description'
 });
 exports.getPost_1 = () => ({
     id: 1,
-    title: 'post title 1',
-    post: 'some post text',
-    year: 2019,
-    month: 10,
-    day: 10,
-    slug: 'post-title-1',
+    title: 'post title',
+    post: 'post content',
+    year: 2021,
+    month: 4,
+    day: 16,
+    slug: 'post-title',
+    tags: [],
     user: exports.getUser_1(),
-    tags: [exports.getTag_1(), exports.getTag_2()],
-    createdAt: exports.getTestDate('2019-10-10 00:00:00'),
-    updatedAt: exports.getTestDate('2019-10-10 00:00:00'),
+    isPublished: true,
+    created_at: '2021-04-18',
+    updated_at: '2021-04-18',
 });
 exports.getPost_2 = () => ({
     id: 2,
-    title: 'post title two',
-    post: 'some post text another',
-    year: 2019,
-    month: 1,
-    day: 9,
-    slug: 'post-title-two',
-    user: exports.getUser_2(),
-    tags: [],
-    createdAt: exports.getTestDate('2019-9-1 00:00:00'),
-    updatedAt: exports.getTestDate('2019-9-1 00:00:00'),
+    title: 'post title 2',
+    post: 'post content 2',
+    year: 2021,
+    month: 4,
+    day: 15,
+    slug: 'post-title-2',
+    tags: [exports.getTag_1()],
+    user: exports.getUser_1(),
+    isPublished: false,
+    created_at: '2021-04-18',
+    updated_at: '2021-04-18'
 });
-exports.getPostList_1 = () => ([
-    exports.getPost_1(), exports.getPost_2()
-]);
-exports.getArchive_1 = () => ({
-    year: 2018,
-    month: 8,
-    total: 15
+exports.getFile_1 = () => ({
+    name: 'test.png',
+    size: 13290,
+    type: 'images/png'
 });
-exports.getArchive_2 = () => ({
-    year: 2018,
-    month: 9,
-    total: 2
+exports.getFile_2 = () => ({
+    name: 'test-2.jpg',
+    size: 12902,
+    type: 'images/jpeg'
+});
+exports.getFile_3 = () => ({
+    name: 'test.exe',
+    size: 400,
+    type: 'executable'
+});
+exports.getFile_4 = () => ({
+    name: 'test.png',
+    size: 237812932102,
+    type: 'executable'
+});
+exports.getUploadFile_1 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_1(), 'test-upload-id'), { id: 'upload-id-1', status: 0 }));
+exports.getUploadFile_2 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_2(), 'test-upload-id'), { id: 'upload-id-2', status: models_1.FileModel.FileStatus.PROGRESS }));
+exports.getUploadFile_3 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_2(), 'test-upload-id'), { id: 'upload-id-3', progress: 100, status: models_1.FileModel.FileStatus.FAIL }));
+exports.getUploadFile_4 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_3(), 'test-upload-id'), { id: 'upload-id-4', progress: 0, status: models_1.FileModel.FileStatus.FAIL, error: 'Server Error' }));
+exports.getUploadFile_5 = () => (Object.assign({}, models_1.FileModel.getFallbackFile(exports.getFile_4(), 'test-upload-id'), { id: 'upload-id-5', progress: 0, status: models_1.FileModel.FileStatus.INACTIVE, error: null }));
+exports.getAlbum_1 = () => ({
+    id: 1,
+    title: 'album 1',
+    dirName: 'path/to/album',
+    description: 'description',
+    date: '2021-10-10',
+    images: []
 });
 //# sourceMappingURL=entities.js.map

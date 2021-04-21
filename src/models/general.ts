@@ -1,25 +1,3 @@
-export enum Entity {
-  AUTH = 'auth',
-  USER = 'users',
-  POST = 'posts',
-  TAG = 'tags',
-  FILE = 'files',
-}
-
-export const Color = {
-  PRIMARY: '#29434e',
-  SECONDARY: '#E1E2E1',
-  THERNARY: '#546e7a',
-  WHITE: '#FFFFFF',
-  GRAY: '#EEEEEE',
-  LIGHT_GRAY: '#F5F5F6',
-  DARK_GRAY: '#646565',
-  BLUE_GRAY: '#9FA7BC',
-  RED_LIGHT: '#f44336',
-  GREEN: '#3AC6AB',
-  FAVORITE: '#FCBF00',
-  NONARY: '#C21E5D',
-};
 export type IEntityMap<T> = { [id: string]: T };
 
 export type Nullable<T> = T | null;
@@ -30,7 +8,6 @@ export enum ToastType {
   ERROR = 'error',
   INFO = 'info'
 }
-
 export interface IPagination<T> {
   items: T[];
   page: number;
@@ -46,6 +23,9 @@ export interface IApiQuery {
   query?: string;
   sort?: string;
   order?: OrderType;
+  tags?: number[];
+  year?: number;
+  month?: number;
 }
 
 export interface IOptionRequest {
@@ -70,3 +50,23 @@ export interface ILoginRequest {
   username: string;
   password: string;
 }
+
+export enum DateFormat {
+  DATE,
+  DATE_TEXT,
+  DATE_MONTH,
+  MONTH_YEAR,
+  DATE_TIME,
+  NUMERIC_DATE,
+  DASHED_NUMERIC
+}
+
+export const dateFormatMap = {
+  [DateFormat.DATE]: 'MMM DD, YYYY',
+  [DateFormat.DATE_TEXT]: 'MMMM DD, YYYY',
+  [DateFormat.DATE_MONTH]: 'DD MMM',
+  [DateFormat.MONTH_YEAR]: 'MMMM YYYY',
+  [DateFormat.DATE_TIME]: 'MMM DD, YYYY hh:mm a',
+  [DateFormat.NUMERIC_DATE]: 'MM/DD/YYYY',
+  [DateFormat.DASHED_NUMERIC]: 'YYYY-MM-DD'
+};

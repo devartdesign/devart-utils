@@ -1,6 +1,7 @@
+import { Nullable } from './general';
 export interface ITag {
-    id: number;
-    name: string;
-    description?: string;
+    id?: Nullable<number>;
+    name: Nullable<string>;
+    description: Nullable<string>;
 }
-export declare const getFallbackTag: (tagId?: number) => ITag;
+export declare const getFallbackTag: () => ITag;

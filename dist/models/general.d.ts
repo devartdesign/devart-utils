@@ -1,24 +1,3 @@
-export declare enum Entity {
-    AUTH = "auth",
-    USER = "users",
-    POST = "posts",
-    TAG = "tags",
-    FILE = "files"
-}
-export declare const Color: {
-    PRIMARY: string;
-    SECONDARY: string;
-    THERNARY: string;
-    WHITE: string;
-    GRAY: string;
-    LIGHT_GRAY: string;
-    DARK_GRAY: string;
-    BLUE_GRAY: string;
-    RED_LIGHT: string;
-    GREEN: string;
-    FAVORITE: string;
-    NONARY: string;
-};
 export declare type IEntityMap<T> = {
     [id: string]: T;
 };
@@ -42,6 +21,9 @@ export interface IApiQuery {
     query?: string;
     sort?: string;
     order?: OrderType;
+    tags?: number[];
+    year?: number;
+    month?: number;
 }
 export interface IOptionRequest {
     method: string;
@@ -64,3 +46,21 @@ export interface ILoginRequest {
     username: string;
     password: string;
 }
+export declare enum DateFormat {
+    DATE = 0,
+    DATE_TEXT = 1,
+    DATE_MONTH = 2,
+    MONTH_YEAR = 3,
+    DATE_TIME = 4,
+    NUMERIC_DATE = 5,
+    DASHED_NUMERIC = 6
+}
+export declare const dateFormatMap: {
+    [DateFormat.DATE]: string;
+    [DateFormat.DATE_TEXT]: string;
+    [DateFormat.DATE_MONTH]: string;
+    [DateFormat.MONTH_YEAR]: string;
+    [DateFormat.DATE_TIME]: string;
+    [DateFormat.NUMERIC_DATE]: string;
+    [DateFormat.DASHED_NUMERIC]: string;
+};

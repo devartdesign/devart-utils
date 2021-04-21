@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getFallbackTag = (tagId = null) => ({
-    id: tagId,
-    name: '...',
-    description: '...'
+exports.getFallbackTag = () => ({
+    id: null,
+    name: '',
+    description: ''
 });
 //# sourceMappingURL=tag.js.map

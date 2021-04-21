@@ -14,23 +14,15 @@
     "build": "yarn clean && tsc",
     "clean": "rm -rf ./dist && mkdir dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/opyacare/opya-utils.git"
-  },
-  "author": "making sense",
+  "author": "ramiro gonzalez",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/opyacare/opya-utils/issues"
-  },
-  "homepage": "https://github.com/opyacare/opya-utils#readme",
-  "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
     "@types/sinon": "^7.0.10",
     "chai": "^4.2.0",
     "mocha": "^6.0.2",
+    "moment": "^2.29.1",
     "nyc": "^13.3.0",
     "pre-commit": "^1.2.2",
     "rxjs": "^6.5.2",
