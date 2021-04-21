@@ -4,10 +4,11 @@ const models_1 = require("../models");
 exports.getLoginResponse = () => ({
     token: 'token-string'
 });
-exports.getLoading = () => ({
-    isLoading: false,
-    hasError: false,
-    error: null
+exports.getLoading = (loading = { isLoading: false, hasError: false, error: null, traceId: undefined }) => ({
+    isLoading: loading.isLoading,
+    hasError: loading.hasError,
+    error: loading.error,
+    traceId: loading.traceId
 });
 exports.getUser_1 = () => ({
     id: 1,

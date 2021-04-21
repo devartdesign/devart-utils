@@ -11,10 +11,13 @@ export const getLoginResponse = (): GeneralModel.ILoginResponse => ({
   token: 'token-string'
 });
 
-export const getLoading = (): GeneralModel.ILoadingStatus => ({
-  isLoading: false,
-  hasError: false,
-  error: null
+export const getLoading = (
+  loading: GeneralModel.ILoadingStatus = { isLoading: false, hasError: false, error: null, traceId: undefined }
+): GeneralModel.ILoadingStatus => ({
+  isLoading: loading.isLoading,
+  hasError: loading.hasError,
+  error: loading.error,
+  traceId: loading.traceId
 });
 
 export const getUser_1 = (): UserModel.IUser => ({

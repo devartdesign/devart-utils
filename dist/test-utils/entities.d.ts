@@ -1,6 +1,6 @@
 import { UserModel, TagModel, FileModel, PostModel, AlbumModel, GeneralModel } from '../models';
 export declare const getLoginResponse: () => GeneralModel.ILoginResponse;
-export declare const getLoading: () => GeneralModel.ILoadingStatus;
+export declare const getLoading: (loading?: GeneralModel.ILoadingStatus) => GeneralModel.ILoadingStatus;
 export declare const getUser_1: () => UserModel.IUser;
 export declare const getUser_2: () => UserModel.IUser;
 export declare const getTag_1: () => TagModel.ITag;
