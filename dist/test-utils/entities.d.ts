@@ -15,3 +15,5 @@ export declare const getUploadFile_3: () => FileModel.IFile;
 export declare const getUploadFile_4: () => FileModel.IFile;
 export declare const getUploadFile_5: () => FileModel.IFile;
 export declare const getAlbum_1: () => AlbumModel.IAlbum;
+export declare const getArchive_1: () => PostModel.IArchivePost;
+export declare const getArchive_2: () => PostModel.IArchivePost;

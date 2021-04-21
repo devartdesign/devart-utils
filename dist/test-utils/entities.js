@@ -80,4 +80,14 @@ exports.getAlbum_1 = () => ({
     date: '2021-10-10',
     images: []
 });
+exports.getArchive_1 = () => ({
+    year: 2018,
+    month: 8,
+    total: 15
+});
+exports.getArchive_2 = () => ({
+    year: 2018,
+    month: 9,
+    total: 2
+});
 //# sourceMappingURL=entities.js.map
