@@ -1,15 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getFallbackPost = ({ title = '', post = '', slug = '', user = null, }) => ({
+exports.getFallbackPost = (post = {
+    title: '',
+    post: '',
+    slug: '',
+    user: null,
+}) => ({
     id: null,
-    title,
-    post,
+    title: post.title,
+    post: post.post,
     year: null,
     month: null,
     day: null,
-    slug,
+    slug: post.slug,
     tags: [],
-    user,
+    user: post.user,
     isPublished: false,
     created_at: null,
     updated_at: null

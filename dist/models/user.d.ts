@@ -4,4 +4,4 @@ export interface IUser {
     email: Nullable<string>;
     name: Nullable<string>;
 }
-export declare const getFallbackUser: ({ email, name }: Partial<IUser>) => IUser;
+export declare const getFallbackUser: (user?: Partial<IUser>) => IUser;

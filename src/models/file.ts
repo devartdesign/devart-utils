@@ -14,16 +14,16 @@ export interface IFile {
   error: any;
 }
 
-export const getFallbackFile = ({
-  file,
-  uploadId = null,
-  status = FileStatus.INACTIVE,
-  error = null
-}: Partial<IFile>): IFile => ({
-  id: `${Date.now()}-${file.name}`,
-  uploadId,
-  file: file,
+export const getFallbackFile = (file: Partial<IFile> = {
+  file: { name: '' } as any,
+  uploadId: null,
+  status: FileStatus.INACTIVE,
+  error: null
+}): IFile => ({
+  id: `${Date.now()}-${file.file.name}`,
+  uploadId: file.uploadId,
+  file: file.file,
   progress: 0,
-  status,
-  error
+  status: file.status,
+  error: file.error
 });

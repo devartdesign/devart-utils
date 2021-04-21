@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getFallbackUser = ({ email = '', name = '' }) => ({
+exports.getFallbackUser = (user = { email: '', name: '' }) => ({
     id: null,
-    email,
-    name
+    email: user.email,
+    name: user.name
 });
 //# sourceMappingURL=user.js.map

@@ -33,4 +33,4 @@ export interface IArchivePost {
     month: number;
     total: number;
 }
-export declare const getFallbackPost: ({ title, post, slug, user, }: Partial<IPost>) => IPost;
+export declare const getFallbackPost: (post?: Partial<IPost>) => IPost;

@@ -12,4 +12,4 @@ export interface IFile {
     status: FileStatus;
     error: any;
 }
-export declare const getFallbackFile: ({ file, uploadId, status, error }: Partial<IFile>) => IFile;
+export declare const getFallbackFile: (file?: Partial<IFile>) => IFile;

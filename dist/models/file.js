@@ -7,12 +7,17 @@ var FileStatus;
     FileStatus[FileStatus["SUCCESS"] = 2] = "SUCCESS";
     FileStatus[FileStatus["FAIL"] = 3] = "FAIL";
 })(FileStatus = exports.FileStatus || (exports.FileStatus = {}));
-exports.getFallbackFile = ({ file, uploadId = null, status = FileStatus.INACTIVE, error = null }) => ({
-    id: `${Date.now()}-${file.name}`,
-    uploadId,
-    file: file,
+exports.getFallbackFile = (file = {
+    file: { name: '' },
+    uploadId: null,
+    status: FileStatus.INACTIVE,
+    error: null
+}) => ({
+    id: `${Date.now()}-${file.file.name}`,
+    uploadId: file.uploadId,
+    file: file.file,
     progress: 0,
-    status,
-    error
+    status: file.status,
+    error: file.error
 });
 //# sourceMappingURL=file.js.map

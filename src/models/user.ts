@@ -6,8 +6,8 @@ export interface IUser {
   name: Nullable<string>;
 }
 
-export const getFallbackUser = ({ email = '', name = '' }: Partial<IUser>): IUser => ({
+export const getFallbackUser = (user: Partial<IUser> = { email: '', name: '' }): IUser => ({
   id: null,
-  email,
-  name
+  email: user.email,
+  name: user.name
 });

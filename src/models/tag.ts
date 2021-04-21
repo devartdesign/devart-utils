@@ -1,3 +1,4 @@
+import { ArgumentOutOfRangeError } from 'rxjs';
 import { Nullable } from './general';
 
 export interface ITag {
@@ -6,8 +7,8 @@ export interface ITag {
   description: Nullable<string>;
 }
 
-export const getFallbackTag = ({ name = '', description = '' }: Partial<ITag>): ITag => ({
+export const getFallbackTag = (tag: Partial<ITag> = { name: '', description: '' }): ITag => ({
   id: null,
-  name,
-  description
+  name: tag.name,
+  description: tag.description
 });

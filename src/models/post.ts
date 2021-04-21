@@ -38,21 +38,21 @@ export interface IArchivePost {
   total: number;
 }
 
-export const getFallbackPost = ({
-  title = '',
-  post = '',
-  slug = '',
-  user = null,
-}: Partial<IPost>): IPost => ({
+export const getFallbackPost = (post: Partial<IPost> = {
+  title: '',
+  post: '',
+  slug: '',
+  user: null,
+}): IPost => ({
   id: null,
-  title,
-  post,
+  title: post.title,
+  post: post.post,
   year: null,
   month: null,
   day: null,
-  slug,
+  slug: post.slug,
   tags: [],
-  user,
+  user: post.user,
   isPublished: false,
   created_at: null,
   updated_at: null
